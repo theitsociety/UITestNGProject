@@ -6,7 +6,7 @@ import utilities.Driver;
 
 import java.util.concurrent.TimeUnit;
 
-public class US08_VerifyAllProductsAndProductDetailPage_Bilal {
+public class TC08_VerifyAllProductsAndProductDetailPage_Bilal {
 
     @Test
     public void VerifyAllProducts(){
