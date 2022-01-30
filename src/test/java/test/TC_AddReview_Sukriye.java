@@ -1,4 +1,4 @@
 package test;
 
-public class TC_AddReview_Sukriye {
+public class TC21_AddReview_Sukriye {
 }
