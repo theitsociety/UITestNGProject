@@ -17,4 +17,18 @@ public class ProductsPage {
 
     @FindBy(xpath = "//a[@href='/product_details/1']")
     public WebElement ViewProductButton1;
+
+    @FindBy(id = "search_product")
+    public WebElement SearchProductInput;
+
+    @FindBy(id = "submit_search")
+    public WebElement SearchProductButton;
+
+    @FindBy(xpath = "(//p[contains(text(),'Sleeves Printed Top - White')])[1]")
+    public WebElement SearchProduct11;
+
+    @FindBy(xpath = "//h2[contains(text(),'Searched Products')]")
+    public WebElement SearchProducts;
+
+
 }

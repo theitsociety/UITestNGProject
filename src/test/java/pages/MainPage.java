@@ -5,8 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
-
-import java.util.WeakHashMap;
 import java.util.concurrent.TimeUnit;
 
 public class MainPage {
@@ -26,6 +24,10 @@ public class MainPage {
 
     @FindBy(xpath = "//a[@href='/products']")
     public WebElement ProductsButton;
+
+    @FindBy(xpath = "//i[@class='fa fa-lock']")
+    public WebElement mainSignUpLogin;
+
 
 
 }

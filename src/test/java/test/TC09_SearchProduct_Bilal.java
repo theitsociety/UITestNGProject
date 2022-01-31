@@ -1,10 +1,17 @@
 package test;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.MainPage;
 import pages.ProductsPage;
+import utilities.Driver;
 import utilities.JSUtils;
+
+import java.util.List;
 
 public class TC09_SearchProduct_Bilal<puclic> {
 /**
@@ -19,6 +26,7 @@ public class TC09_SearchProduct_Bilal<puclic> {
  */
 MainPage mainPage = new MainPage();
 ProductsPage products = new ProductsPage();
+SoftAssert softAssert = new SoftAssert();
 
  @Test
  public void SearchProduct(){
@@ -30,13 +38,21 @@ ProductsPage products = new ProductsPage();
 //     4. Click on 'Products' button
      mainPage.ProductsButton.click();
 //     5. Verify user is navigated to ALL PRODUCTS page successfully
-     System.out.println("Automation Exercise - All Products = "+JSUtils.getTitleByJS());
+     System.out.println("Products page's Title= "+JSUtils.getTitleByJS());//This is for getting Title on the console for verify
      String AllProductPageTitle = JSUtils.getTitleByJS();
-     Assert.assertEquals("Automation Exercise - All Products",AllProductPageTitle);
-     Assert.assertTrue(products.AllProductsText.isDisplayed());
+     Assert.assertEquals(AllProductPageTitle,"Automation Exercise - All Products","Title is not true");
+     //Assert.assertTrue(products.AllProductsText.isDisplayed());
 //     6. Enter product name in search input and click search button
-
+        products.SearchProductInput.sendKeys("Sleeves Printed Top - White");
+        products.SearchProductButton.click();
 //     7. Verify 'SEARCHED PRODUCTS' is visible
+     String str = products.SearchProducts.getText();
+     Assert.assertEquals(str,"SEARCHED PRODUCTS","searched products is not visible");
+     //Assert.assertTrue(products.SearchProducts.isDisplayed());
 //     8. Verify all the products related to search are visible
-    }
+     int numberOfImage = Driver.getDriver().findElements(By.xpath("//img")).size();//two image coming like default in this page
+     Assert.assertEquals(numberOfImage,3,"related products are not visible");
+     softAssert.assertTrue(products.SearchProduct11.isDisplayed());
+     softAssert.assertAll();
+ }
 }

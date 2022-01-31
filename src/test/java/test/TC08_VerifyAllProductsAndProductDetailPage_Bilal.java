@@ -1,4 +1,5 @@
 package test;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.MainPage;
@@ -34,6 +35,21 @@ public class TC08_VerifyAllProductsAndProductDetailPage_Bilal {
 //        4. Click on 'ProductsPage' button
         mainPage.ProductsButton.click();
 //        5. Verify user is navigated to ALL PRODUCTS page successfully
+       /** To Check element present:
+          if(Driver.getDriver().findElements(By.xpath("//h2[contains(text(),'All Products')]")).size() != 0){
+            System.out.println("Element is Present");
+        }else{
+            System.out.println("Element is Absent");}*/
+        /* To Check element present:
+        if(products.AllProductsText!=null){
+            System.out.println("Element is Present");
+        }else{
+            System.out.println("Element is Absent");}*/
+        /** To Check Text Present
+         if(Driver.getDriver().getPageSource().contains("All Products")){
+        System.out.println("Text is present");
+         }else{
+         System.out.println("Text is absent");}*/
         Assert.assertTrue(products.AllProductsText.isDisplayed());
 //        6. The products list is visible
         Assert.assertTrue(products.ProductPicture1.isDisplayed());
