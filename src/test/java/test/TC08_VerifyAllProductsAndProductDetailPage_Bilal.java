@@ -1,23 +1,61 @@
 package test;
-
-<<<<<<< HEAD
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.ConfigReader;
+import pages.MainPage;
+import pages.Product_details1Page;
+import pages.ProductsPage;
 import utilities.Driver;
-
-import java.util.concurrent.TimeUnit;
+import utilities.JSUtils;
+import utilities.ReusableMethods;
 
 public class TC08_VerifyAllProductsAndProductDetailPage_Bilal {
+    /**
+     1. Launch browser
+     2. Navigate to url 'http://automationexercise.com'
+     3. Verify that home page is visible successfully
+     4. Click on 'ProductsPage' button
+     5. Verify user is navigated to ALL PRODUCTS page successfully
+     6. The products list is visible
+     7. Click on 'View Product' of first product
+     8. User is landed to product detail page
+     9. Verify that detail detail is visible: product name, category, price, availability, condition, brand
+     */
+    MainPage mainPage = new MainPage();
+    ProductsPage products = new ProductsPage();
+    Product_details1Page product_details = new Product_details1Page();
 
     @Test
     public void VerifyAllProducts(){
-        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
-        Driver.getDriver().manage().window().maximize();
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        1. Launch browser
+//        2. Navigate to url 'http://automationexercise.com'
+        MainPage.setUp();
+//        3. Verify that home page is visible successfully
+        Assert.assertTrue(mainPage.AutomationExerciseImg.isDisplayed());
+//        4. Click on 'ProductsPage' button
+        mainPage.ProductsButton.click();
+//        5. Verify user is navigated to ALL PRODUCTS page successfully
+        Assert.assertTrue(products.AllProductsText.isDisplayed());
+//        6. The products list is visible
+        Assert.assertTrue(products.ProductPicture1.isDisplayed());
+//        7. Click on 'View Product' of first product
+        JSUtils.scrollIntoViewJS(products.ViewProductButton1);//Scroll into view with JS
+        ReusableMethods.waitFor(2);//I put extra wait to see from browser
+        products.ViewProductButton1.click();
+//        8. User is landed to product detail page
+        System.out.println("Title Of Product Detail Page = "+JSUtils.getTitleByJS());
+        String TitleOfProductDetailPage = JSUtils.getTitleByJS();
+        Assert.assertEquals("Automation Exercise - Product Details",TitleOfProductDetailPage);
+//        9. Verify that detail detail is visible: product name, category, price, availability, condition, brand
+        Assert.assertTrue(product_details.ProductName.isDisplayed());
+        Assert.assertTrue(product_details.Category.isDisplayed());
+        Assert.assertTrue(product_details.Price.isDisplayed());
+        Assert.assertTrue(product_details.Availability.isDisplayed());
+        Assert.assertTrue(product_details.Condition.isDisplayed());
+        Assert.assertTrue(product_details.Brand.isDisplayed());
 
+//        10.Close the browser
+        Driver.closeDriver();
     }
 
-=======
-public class TC08_VerifyAllProductsAndProductDetailPage_Bilal {
->>>>>>> main
+
 }
