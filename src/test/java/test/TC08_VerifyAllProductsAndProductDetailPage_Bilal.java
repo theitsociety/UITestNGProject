@@ -1,5 +1,6 @@
 package test;
 
+<<<<<<< HEAD
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -16,4 +17,7 @@ public class TC08_VerifyAllProductsAndProductDetailPage_Bilal {
 
     }
 
+=======
+public class TC08_VerifyAllProductsAndProductDetailPage_Bilal {
+>>>>>>> main
 }
