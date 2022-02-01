@@ -13,7 +13,7 @@ import utilities.JSUtils;
 
 import java.util.List;
 
-public class TC09_SearchProduct_Bilal<puclic> {
+public class TC09_SearchProduct_Bilal {
 /**
  1. Launch browser
  2. Navigate to url 'http://automationexercise.com'
