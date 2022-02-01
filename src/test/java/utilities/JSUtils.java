@@ -34,7 +34,7 @@ public class JSUtils {
             e.printStackTrace();
         }
     }
-    //Flashing teh background color
+    //Flashing the background color
     public static void flash(WebElement element) {
         String bgColor = element.getCssValue("backgroundcolor");
         for (int i = 0; i < 10; i++) {
@@ -42,7 +42,7 @@ public class JSUtils {
             changeColor(bgColor, element);
         }
     }
-    //this willg enerate an alert when needed
+    //this will generate an alert when needed
     public static void generateAlert(String message) throws InterruptedException {
         JavascriptExecutor javascriptExecutor = ((JavascriptExecutor) Driver.getDriver());
         javascriptExecutor.executeScript("alert('" + message + "')");
