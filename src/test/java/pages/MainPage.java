@@ -28,6 +28,13 @@ public class MainPage {
     @FindBy(xpath = "//i[@class='fa fa-lock']")
     public WebElement mainSignUpLogin;
 
+    @FindBy(xpath = "//input[@id='susbscribe_email']")
+    public WebElement subscriptionEmail;
+
+    @FindBy(xpath = "//input[@id='susbscribe_email']")
+    public WebElement subscribeButton;//button[@id='subscribe']
+
+
 
 
 }
