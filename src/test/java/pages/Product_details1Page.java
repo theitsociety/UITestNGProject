@@ -26,4 +26,22 @@ public class Product_details1Page {
 
     @FindBy (xpath = "//b[contains(text(),'Brand')]")
     public WebElement Brand;
+
+    @FindBy (xpath = "//a[text()='Write Your Review'] ")
+    public WebElement writeYourReview;
+
+    @FindBy (id="name")
+    public WebElement yourName;
+
+    @FindBy (xpath = "//input[@id='email']")
+    public WebElement emailAddress;
+
+    @FindBy (xpath = "//textarea[@name='review']")
+    public WebElement addReviewHere;
+
+    @FindBy (xpath = "//button[@id='button-review']")
+    public WebElement submitButton;
+
+    @FindBy (xpath = "//*[text()[contains(.,'Thank you for your review')]]")
+    public WebElement successMessage;
 }
