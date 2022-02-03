@@ -2,8 +2,6 @@ package test;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.ContactUsPage;
@@ -18,7 +16,7 @@ public class TC06_ContactUsAndUploadFile {
     Faker faker=new Faker();
 
     @Test
-    public void contactUs() throws InterruptedException {
+    public void contactUs() {
         // 1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
         MainPage.setUp();

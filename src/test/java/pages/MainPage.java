@@ -31,6 +31,11 @@ public class MainPage {
     @FindBy(xpath = "//li/a[@href='/contact_us']")
     public WebElement contactUsButton;
 
+    @FindBy(xpath = "//li/a[@href='/test_cases']")
+    public WebElement testCasesButton;
+
+
+
 
 
 
