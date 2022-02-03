@@ -31,10 +31,13 @@ public class MainPage {
     @FindBy(xpath = "//input[@id='susbscribe_email']")
     public WebElement subscriptionEmail;
 
-    @FindBy(xpath = "//input[@id='susbscribe_email']")
-    public WebElement subscribeButton;//button[@id='subscribe']
+    @FindBy(xpath = "//button[@id='subscribe']")
+    public WebElement subscribeButton;
 
+    @FindBy(xpath = "//*[.='You have been successfully subscribed!']")
+    public WebElement successfullySubscribed;
 
-
+    @FindBy(xpath = "//a[@href='/view_cart']")
+    public WebElement cartButton;
 
 }

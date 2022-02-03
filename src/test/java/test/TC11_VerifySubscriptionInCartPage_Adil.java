@@ -16,22 +16,23 @@ import utilities.ReusableMethods;
 import java.util.List;
 import static org.testng.Assert.assertTrue;
 
-public class TC10_VerifySubscriptionInHomePage_Adil {
+public class TC11_VerifySubscriptionInCartPage_Adil {
 
     /*
 1. Launch browser
 2. Navigate to url 'http://automationexercise.com'
 3. Verify that home page is visible successfully
-4. Scroll down to footer
-5. Verify text 'SUBSCRIPTION'
-6. Enter email address in input and click arrow button
-7. Verify success message 'You have been successfully subscribed!' is visible
+4. Click 'Cart' button
+5. Scroll down to footer
+6. Verify text 'SUBSCRIPTION'
+7. Enter email address in input and click arrow button
+8. Verify success message 'You have been successfully subscribed!' is visible
      */
 
     MainPage mainPage;
 
     @Test
-    public void TC10_TC001() {
+    public void TC11_TC001() {
 
         mainPage = new MainPage();
 
@@ -43,6 +44,8 @@ public class TC10_VerifySubscriptionInHomePage_Adil {
         String expectedTitle = "Automation Exercise";
         Assert.assertEquals(actualTitle, expectedTitle);
 
+        //Click 'Cart' button
+        mainPage.cartButton.click();
 
         //Scroll down to footer
         JSUtils.scrollIntoViewJS(mainPage.subscriptionEmail);//Scroll into view with JS
@@ -62,3 +65,4 @@ public class TC10_VerifySubscriptionInHomePage_Adil {
 
     }
 }
+
