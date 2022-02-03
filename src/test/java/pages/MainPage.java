@@ -28,6 +28,12 @@ public class MainPage {
     @FindBy(xpath = "//i[@class='fa fa-lock']")
     public WebElement mainSignUpLogin;
 
+    @FindBy(xpath = "//li/a[@href='/contact_us']")
+    public WebElement contactUsButton;
+
+
+
+
 
 
 }
