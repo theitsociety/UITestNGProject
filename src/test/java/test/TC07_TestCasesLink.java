@@ -1,18 +1,14 @@
 package test;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.MainPage;
-import pages.TestCasesPage;
 import utilities.Driver;
 
 public class TC07_TestCasesLink {
 
     MainPage mainPage=new MainPage();
-    TestCasesPage testCasesPage=new TestCasesPage();
 
     @Test
     public void testCases() {
