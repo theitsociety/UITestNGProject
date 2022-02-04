@@ -39,8 +39,8 @@ public class MainPage {
 
     @FindBy(xpath = "//a[@href='/view_cart']")
     public WebElement cartButton;
-    
-      @FindBy(xpath = "//a[text()=' Signup / Login']")
+
+    @FindBy(xpath = "//a[text()=' Signup / Login']")
     public WebElement signupLogin;
     @FindBy(xpath = "//a[text()=' Logged in as ']")
     public WebElement loggedInAs;
