@@ -34,8 +34,6 @@ public class LoginPage {
     public WebElement signUpButton;
     @FindBy(xpath = "//*[.='Email Address already exist!']")
     public WebElement emailExist;
-      @FindBy(xpath = "//h2[text()='New User Signup!']")
-    public WebElement newUserSignup;
     @FindBy (xpath = "//input[@name='name']")
     public WebElement name;
     @FindBy (xpath = "//input[@data-qa='signup-email']")
