@@ -48,5 +48,10 @@ public class LoginPage {
     public WebElement loginPassword;
     @FindBy (xpath = "//button[@data-qa='login-button']")
     public WebElement loginButton;
+    @FindBy(xpath = "//a[@href='/delete_account']")
+    public WebElement deleteAccount;
+    @FindBy(xpath = "//p[text()='Your email or password is incorrect!']")
+    public WebElement incorrect;
+
 
 }
