@@ -51,4 +51,5 @@ public class MainPage {
     @FindBy(xpath = "//img[@alt='Website for automation practice']")
     public WebElement isDispley;
 
+
 }
