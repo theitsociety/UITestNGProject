@@ -38,8 +38,8 @@ public class TC12_AddProducts_Zehra {
         loginPage = new LoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
         mainPage.mainSignUpLogin.click();
-        loginPage.email.sendKeys(ConfigReader.getProperty("email"));
-        loginPage.password.sendKeys(ConfigReader.getProperty("password"));
+        loginPage.email.sendKeys(ConfigReader.getProperty("email_zehra"));
+        loginPage.password.sendKeys(ConfigReader.getProperty("password_zehra"));
         loginPage.login.click();
     }
 
