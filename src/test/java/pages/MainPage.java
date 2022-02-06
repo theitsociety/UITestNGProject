@@ -28,6 +28,9 @@ public class MainPage {
     @FindBy(xpath = "//i[@class='fa fa-lock']")
     public WebElement mainSignUpLogin;
 
+    @FindBy(xpath = "//a[@href='/view_cart']")
+    public WebElement cartButton;
+
     @FindBy(xpath = "//input[@id='susbscribe_email']")
     public WebElement subscriptionEmail;
 
@@ -36,9 +39,6 @@ public class MainPage {
 
     @FindBy(xpath = "//*[.='You have been successfully subscribed!']")
     public WebElement successfullySubscribed;
-
-    @FindBy(xpath = "//a[@href='/view_cart']")
-    public WebElement cartButton;
 
     @FindBy(xpath = "//a[text()=' Signup / Login']")
     public WebElement signupLogin;

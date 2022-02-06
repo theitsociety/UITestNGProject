@@ -50,4 +50,40 @@ public class ProductsPage {
 
     @FindBy(xpath = "(//h2[contains(text(), 'Rs. 400')])[1]")
     public WebElement secondProductPrice;
+
+    @FindBy(xpath = "//h2[contains(text(),'Blue Top')]")
+    public WebElement firstProductDetail;
+
+    @FindBy(id = "quantity")
+    public WebElement quantityInViewProduct;
+
+    @FindBy(xpath = "//*[@id=\"do_action\"]/div[1]/div/div/a")
+    public WebElement proceedToCheckout;
+
+    @FindBy(xpath = "(//td[@class='cart_price'])[1]")
+    public WebElement firstProductPriceInCart;
+
+    @FindBy(xpath = "(//td[@class='cart_price'])[2]")
+    public WebElement secondProductPriceInCart;
+
+    @FindBy(xpath = "//button[@type='button']")
+    public WebElement addToCartInViewProduct;
+
+    @FindBy(xpath = "(//button[@class='disabled'])[1]")
+    public WebElement quantityInCart;
+
+    @FindBy(xpath = "(//button[@class='disabled'])[2]")
+    public WebElement secondProductQuantityInCart;
+
+    @FindBy(xpath = "(//p[@class='cart_total_price'])[1]")
+    public WebElement firstProductAmount;
+
+    @FindBy(xpath = "(//p[@class='cart_total_price'])[2]")
+    public WebElement secondProductAmount;
+
+    @FindBy(xpath = "(//p[@class='cart_total_price'])[3]")
+    public WebElement totalAmount;
+
+    @FindBy(xpath = "//i[@class='fa fa-times']")
+    public WebElement removeProduct;
 }
