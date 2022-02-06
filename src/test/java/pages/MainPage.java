@@ -28,6 +28,9 @@ public class MainPage {
     @FindBy(xpath = "//i[@class='fa fa-lock']")
     public WebElement mainSignUpLogin;
 
+    @FindBy(xpath = "//a[@href='/view_cart']")
+    public WebElement cartButton;
+
 
 
 }
