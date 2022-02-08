@@ -164,8 +164,12 @@ public class ReusableMethods {
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
     }
-}
+    public static void selectFromDropDown(WebElement selectData, String value){
+        Select selectElement = new Select(selectData);
+        selectElement.selectByValue(value);
 
+    }
+}
 
 
 
