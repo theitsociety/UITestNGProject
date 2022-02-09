@@ -50,11 +50,4 @@ public class ProductsPage {
 
     @FindBy(xpath = "(//h2[contains(text(), 'Rs. 400')])[1]")
     public WebElement secondProductPrice;
-
-
-
-
-
-
-
 }

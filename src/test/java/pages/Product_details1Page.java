@@ -44,4 +44,10 @@ public class Product_details1Page {
 
     @FindBy (xpath = "//*[text()[contains(.,'Thank you for your review')]]")
     public WebElement successMessage;
+
+    @FindBy (xpath = "//*[@data-product-id]")
+    public WebElement addToCartButton;
+
+    @FindBy (xpath = "//button[text()='Continue Shopping']")
+    public  WebElement continueShopping;
 }
