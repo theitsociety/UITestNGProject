@@ -89,7 +89,8 @@ public class TC20_SearchProduct_Sukriye {
         System.out.println(actualProductInTheCard);
         Assert.assertEquals(actualProductInTheCardAfterLogin,expectedProductInTheCard);
 
-
-
+         Driver.getDriver().close();
     }
+
+
 }

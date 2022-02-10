@@ -7,6 +7,7 @@ import pages.MainPage;
 import pages.Product_details1Page;
 import pages.ProductsPage;
 import utilities.ConfigReader;
+import utilities.Driver;
 import utilities.JSUtils;
 
 public class TC21_AddReview_Sukriye {
@@ -46,5 +47,7 @@ public class TC21_AddReview_Sukriye {
 
         //Verify success message "Thank you for your review"
         Assert.assertEquals(product_details1Page.successMessage.getText(),"Thank you for your review.");
+
+        Driver.getDriver().close();
     }
 }
