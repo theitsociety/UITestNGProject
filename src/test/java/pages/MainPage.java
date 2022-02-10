@@ -37,6 +37,9 @@ public class MainPage {
     @FindBy(xpath = "//button[@id='subscribe']")
     public WebElement subscribeButton;
 
+    @FindBy(xpath = "//i[@class='fa fa-angle-up']")
+    public WebElement arrowBtn;
+
     @FindBy(xpath = "//*[.='You have been successfully subscribed!']")
     public WebElement successfullySubscribed;
 
@@ -50,6 +53,14 @@ public class MainPage {
     public WebElement test_case1;
     @FindBy(xpath = "//img[@alt='Website for automation practice']")
     public WebElement isDispley;
+
+    @FindBy(xpath = "//h2[.='Subscription']")
+    public WebElement subscriptionBtn;
+
+    @FindBy(xpath = "//h2[.='Full-Fledged practice website for Automation Engineers']")
+    public WebElement fullFledged;
+
+
 
 
 }
