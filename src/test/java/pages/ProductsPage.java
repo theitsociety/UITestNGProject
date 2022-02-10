@@ -86,4 +86,13 @@ public class ProductsPage {
 
     @FindBy(xpath = "//i[@class='fa fa-times']")
     public WebElement removeProduct;
+
+    @FindBy(xpath = "(//a[@data-product-id='1'])[1]")
+    public WebElement firstProduct;
+
+    @FindBy(xpath = "//a[.='View Cart']")
+    public WebElement viewCartBtn;
+
+    @FindBy(xpath = "//a[.='Register / Login']")
+    public WebElement registerLoginBtn;
 }
