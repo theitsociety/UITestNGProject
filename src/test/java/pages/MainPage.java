@@ -28,6 +28,7 @@ public class MainPage {
     @FindBy(xpath = "//i[@class='fa fa-lock']")
     public WebElement mainSignUpLogin;
 
+
     @FindBy(xpath = "//input[@id='susbscribe_email']")
     public WebElement subscriptionEmail;
 
@@ -39,6 +40,10 @@ public class MainPage {
 
     @FindBy(xpath = "//a[@href='/view_cart']")
     public WebElement cartButton;
+   
+    @FindBy(xpath = "//i[@class='fa fa-angle-up']")
+    public WebElement arrowBtn;
+   
 
     @FindBy(xpath = "//a[text()=' Signup / Login']")
     public WebElement signupLogin;
@@ -50,6 +55,16 @@ public class MainPage {
     public WebElement test_case1;
     @FindBy(xpath = "//img[@alt='Website for automation practice']")
     public WebElement isDispley;
+
+
+    @FindBy(xpath = "//h2[.='Subscription']")
+    public WebElement subscriptionBtn;
+
+    @FindBy(xpath = "//h2[.='Full-Fledged practice website for Automation Engineers']")
+    public WebElement fullFledged;
+
+
+
 
 
 }
