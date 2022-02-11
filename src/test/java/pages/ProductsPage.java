@@ -51,6 +51,9 @@ public class ProductsPage {
     @FindBy(xpath = "(//h2[contains(text(), 'Rs. 400')])[1]")
     public WebElement secondProductPrice;
 
+
+
+
     @FindBy(xpath = "//h2[contains(text(),'Blue Top')]")
     public WebElement firstProductDetail;
 
@@ -96,3 +99,4 @@ public class ProductsPage {
     @FindBy(xpath = "//a[.='Register / Login']")
     public WebElement registerLoginBtn;
 }
+

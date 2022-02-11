@@ -168,6 +168,7 @@ public class ReusableMethods {
         Select selectElement = new Select(selectData);
         selectElement.selectByValue(value);
 
+
     }
     public static void scrollDown(int pixels){
         //Driver it is a class name; we can call getDriver(); method
@@ -177,6 +178,8 @@ public class ReusableMethods {
 
     }
 }
+
+    
 
 
 

@@ -51,9 +51,7 @@ public class SignupPage {
     public WebElement mobile_number;
     @FindBy(xpath = "//button[@data-qa='create-account']")
     public WebElement createAccount;
-
-
-
     @FindBy(xpath = "//a[.='Proceed To Checkout']")
     public WebElement proceedToCheckout;
+
 }
