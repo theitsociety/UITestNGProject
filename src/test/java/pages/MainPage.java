@@ -5,6 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
+
+import javax.annotation.processing.Generated;
+import java.nio.file.WatchEvent;
 import java.util.concurrent.TimeUnit;
 
 public class MainPage {
@@ -40,10 +43,10 @@ public class MainPage {
 
     @FindBy(xpath = "//a[@href='/view_cart']")
     public WebElement cartButton;
-   
+
     @FindBy(xpath = "//i[@class='fa fa-angle-up']")
     public WebElement arrowBtn;
-   
+
 
     @FindBy(xpath = "//a[text()=' Signup / Login']")
     public WebElement signupLogin;
@@ -63,8 +66,10 @@ public class MainPage {
     @FindBy(xpath = "//h2[.='Full-Fledged practice website for Automation Engineers']")
     public WebElement fullFledged;
 
+    @FindBy(xpath = "//a[@data-product-id='13' or @xpath='1']")
+    public WebElement frozenTopsForKids;
 
-
-
+    @FindBy(xpath = "//u[text()='View Cart']")
+    public WebElement viewCart;
 
 }
