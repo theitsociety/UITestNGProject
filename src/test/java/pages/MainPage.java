@@ -31,6 +31,17 @@ public class MainPage {
     @FindBy(xpath = "//i[@class='fa fa-lock']")
     public WebElement mainSignUpLogin;
 
+    @FindBy(xpath = "//li/a[@href='/contact_us']")
+    public WebElement contactUsButton;
+
+    @FindBy(xpath = "//li/a[@href='/test_cases']")
+    public WebElement testCasesButton;
+
+
+
+
+
+
 
     @FindBy(xpath = "//input[@id='susbscribe_email']")
     public WebElement subscriptionEmail;

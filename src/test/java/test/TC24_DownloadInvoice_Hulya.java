@@ -32,7 +32,7 @@ public class TC24_DownloadInvoice_Hulya {
      * 22. Verify 'ACCOUNT DELETED!' and click 'Continue' button
      */
     MainPage mainPage;
-    Product_details1Page productsPage;
+    ProductsPage productsPage;
     LoginPage loginPage;
     Faker faker;
     SignupPage signupPage;
@@ -46,7 +46,7 @@ public class TC24_DownloadInvoice_Hulya {
 
     public void DownloadInvoiceTest(){
    mainPage=new MainPage();
-   productsPage=new Product_details1Page();
+   productsPage=new ProductsPage();
    loginPage =new LoginPage();
    faker=new Faker();
    signupPage=new SignupPage();
