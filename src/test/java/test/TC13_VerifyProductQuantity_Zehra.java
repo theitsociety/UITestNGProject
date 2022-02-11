@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.MainPage;
 import pages.Product_details1Page;
+import pages.ProductsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -24,12 +25,12 @@ public class TC13_VerifyProductQuantity_Zehra {
      */
 
     MainPage mainPage;
-    Product_details1Page productsPage;
+    ProductsPage productsPage;
 
     @Test()
     public void TC13_TC001() {
         mainPage = new MainPage();
-        productsPage = new Product_details1Page();
+        productsPage = new ProductsPage();
 
         //1-Launch browser
         //2-Navigate to url 'http://automationexercise.com'
