@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class ProductsPage {
-    public ProductsPage(){
+public class Product_details1Page {
+    public Product_details1Page(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "//h2[contains(text(),'Blue Top')]")
@@ -79,7 +79,7 @@ public class ProductsPage {
 
     @FindBy(xpath = "//a[@data-product-id='2']")
     public WebElement addToCartSecondProduct;
-    
+
     @FindBy(xpath = " //p[@class='text-center']//a")
     public WebElement viewCart;
 

@@ -1,10 +1,8 @@
 package test;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.MainPage;
 import pages.Product_details1Page;
-import pages.ProductsPage;
 import utilities.Driver;
 import utilities.JSUtils;
 import utilities.ReusableMethods;
@@ -22,7 +20,7 @@ public class TC08_VerifyAllProductsAndProductDetailPage_Bilal {
      9. Verify that detail detail is visible: product name, category, price, availability, condition, brand
      */
     MainPage mainPage = new MainPage();
-    ProductsPage products = new ProductsPage();
+    Product_details1Page products = new Product_details1Page();
     Product_details1Page product_details = new Product_details1Page();
 
     @Test

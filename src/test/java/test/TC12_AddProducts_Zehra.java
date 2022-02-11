@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.MainPage;
+import pages.Product_details1Page;
 import pages.ProductsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -31,6 +32,7 @@ public class TC12_AddProducts_Zehra {
 
     MainPage mainPage = new MainPage();
     ProductsPage productsPage = new ProductsPage();
+    Product_details1Page product_details1Page = new Product_details1Page();
     LoginPage loginPage;
 
     @BeforeTest
@@ -60,26 +62,26 @@ public class TC12_AddProducts_Zehra {
 
         //5-Hover over first product and click 'Add to cart'
         Actions action1 = new Actions(Driver.getDriver());
-        action1.moveToElement(productsPage.ProductPicture1).build().perform();
+        action1.moveToElement(product_details1Page.ProductPicture1).build().perform();
         action1.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.waitFor(2);
         //Updating first product quantity
        // productsPage.addToCartFirstProduct.click();
-        productsPage.ViewProductButton1.click();
+        product_details1Page.ViewProductButton1.click();
         productsPage.quantityInViewProduct.clear();
         productsPage.quantityInViewProduct.sendKeys("4");
         productsPage.addToCartInViewProduct.click();
         //6-Click 'Continue Shopping' button
-        productsPage.continueShopping.click();
+        product_details1Page.continueShopping.click();
         mainPage.ProductsButton.click();
 
         //7-Hover over second product and click 'Add to cart'
         Actions action2 = new Actions(Driver.getDriver());
-        action2.moveToElement(productsPage.ProductPicture2).build().perform();
-        productsPage.addToCartSecondProduct.click();
+        action2.moveToElement(product_details1Page.ProductPicture2).build().perform();
+        product_details1Page.addToCartSecondProduct.click();
 
         //8-Click 'View Cart' button
-        productsPage.viewCart.click();
+        product_details1Page.viewCart.click();
 
         //9-Verify both products are added to Cart
         WebElement product1 = Driver.getDriver().findElement(By.id("product-1"));
@@ -92,8 +94,8 @@ public class TC12_AddProducts_Zehra {
     public void TC12_TC003() {
         //10-Verify their prices, quantity and total price
         mainPage.ProductsButton.click();
-        int blueTopPrice = Integer.parseInt(productsPage.firstProductPrice.getText().replaceAll("[^0-9]", ""));
-        int menTshirtPrice = Integer.parseInt(productsPage.secondProductPrice.getText().replaceAll("[^0-9]", ""));
+        int blueTopPrice = Integer.parseInt(product_details1Page.firstProductPrice.getText().replaceAll("[^0-9]", ""));
+        int menTshirtPrice = Integer.parseInt(product_details1Page.secondProductPrice.getText().replaceAll("[^0-9]", ""));
         mainPage.cartButton.click();
         productsPage.proceedToCheckout.click();
         int blueTopCartPrice = Integer.parseInt(productsPage.firstProductPriceInCart.getText().replaceAll("[^0-9]", ""));

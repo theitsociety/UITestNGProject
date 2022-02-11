@@ -7,6 +7,7 @@ import utilities.Driver;
 
 public class CheckoutPage {
     public CheckoutPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "(//li[@class='address_firstname address_lastname'])[1]")
@@ -38,4 +39,5 @@ public class CheckoutPage {
 
     @FindBy(xpath = "//a[.='Place Order']")
     public WebElement placeOrderBtn;
+
 }

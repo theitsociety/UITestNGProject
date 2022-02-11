@@ -5,14 +5,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.MainPage;
 import pages.Product_details1Page;
-import pages.ProductsPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.JSUtils;
 
 public class TC21_AddReview_Sukriye {
     MainPage mainPage = new MainPage();
-    ProductsPage products = new ProductsPage();
+    Product_details1Page products = new Product_details1Page();
     Product_details1Page product_details1Page=new Product_details1Page();
     Faker faker=new Faker();
 

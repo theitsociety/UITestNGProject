@@ -1,17 +1,13 @@
 package test;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.MainPage;
-import pages.ProductsPage;
+import pages.Product_details1Page;
 import utilities.Driver;
 import utilities.JSUtils;
-
-import java.util.List;
 
 public class TC09_SearchProduct_Bilal {
 /**
@@ -25,7 +21,7 @@ public class TC09_SearchProduct_Bilal {
  8. Verify all the products related to search are visible
  */
 MainPage mainPage = new MainPage();
-ProductsPage products = new ProductsPage();
+Product_details1Page products = new Product_details1Page();
 SoftAssert softAssert = new SoftAssert();
 
  @Test

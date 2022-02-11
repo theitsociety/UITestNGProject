@@ -4,7 +4,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.MainPage;
-import pages.ProductsPage;
+import pages.Product_details1Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -24,12 +24,12 @@ public class TC13_VerifyProductQuantity_Zehra {
      */
 
     MainPage mainPage;
-    ProductsPage productsPage;
+    Product_details1Page productsPage;
 
     @Test()
     public void TC13_TC001() {
         mainPage = new MainPage();
-        productsPage = new ProductsPage();
+        productsPage = new Product_details1Page();
 
         //1-Launch browser
         //2-Navigate to url 'http://automationexercise.com'
