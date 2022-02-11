@@ -29,5 +29,6 @@ public class TC07_TestCasesLink {
         System.out.println(currentURL);
         String expectedCurrentURL="https://www.automationexercise.com/test_cases";
         Assert.assertEquals(currentURL,expectedCurrentURL);
+        //All is done
     }
 }
