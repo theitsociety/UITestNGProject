@@ -164,8 +164,22 @@ public class ReusableMethods {
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
     }
+    public static void selectFromDropDown(WebElement selectData, String value){
+        Select selectElement = new Select(selectData);
+        selectElement.selectByValue(value);
+
+
+    }
+    public static void scrollDown(int pixels){
+        //Driver it is a class name; we can call getDriver(); method
+        JavascriptExecutor js=  (JavascriptExecutor) Driver.getDriver();//it is interface and we have to cast it
+        js.executeScript("window.scrollBy(0,"+pixels+")");
+
+
+    }
 }
 
+    
 
 
 

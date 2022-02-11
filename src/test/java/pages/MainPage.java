@@ -5,6 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
+
+import javax.annotation.processing.Generated;
+import java.nio.file.WatchEvent;
 import java.util.concurrent.TimeUnit;
 
 public class MainPage {
@@ -40,5 +43,45 @@ public class MainPage {
 
 
 
+    @FindBy(xpath = "//input[@id='susbscribe_email']")
+    public WebElement subscriptionEmail;
+
+    @FindBy(xpath = "//button[@id='subscribe']")
+    public WebElement subscribeButton;
+
+    @FindBy(xpath = "//*[.='You have been successfully subscribed!']")
+    public WebElement successfullySubscribed;
+
+    @FindBy(xpath = "//a[@href='/view_cart']")
+    public WebElement cartButton;
+
+    @FindBy(xpath = "//i[@class='fa fa-angle-up']")
+    public WebElement arrowBtn;
+
+
+    @FindBy(xpath = "//a[text()=' Signup / Login']")
+    public WebElement signupLogin;
+    @FindBy(xpath = "//a[text()=' Logged in as ']")
+    public WebElement loggedInAs;
+    @FindBy(xpath = "//a[text()=' Delete Account']")
+    public WebElement delete_Account;
+    @FindBy(partialLinkText = "Test Cas")
+    public WebElement test_case1;
+    @FindBy(xpath = "//img[@alt='Website for automation practice']")
+    public WebElement isDispley;
+
+
+    @FindBy(xpath = "//h2[.='Subscription']")
+    public WebElement subscriptionBtn;
+
+    @FindBy(xpath = "//h2[.='Full-Fledged practice website for Automation Engineers']")
+    public WebElement fullFledged;
+
+    @FindBy(xpath = "//a[@data-product-id='13' or @xpath='1']")
+    public WebElement frozenTopsForKids;
+
+    @FindBy(xpath = "//u[text()='View Cart']")
+    public WebElement viewCart;
 
 }
+
