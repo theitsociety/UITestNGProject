@@ -73,3 +73,4 @@ public class MainPage {
     public WebElement viewCart;
 
 }
+

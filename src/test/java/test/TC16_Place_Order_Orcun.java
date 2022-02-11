@@ -12,7 +12,7 @@ import utilities.ReusableMethods;
 public class TC16_Place_Order_Orcun {
     MainPage mainPage = new MainPage();
     LoginPage loginPage = new LoginPage();
-    ProductsPage productsPage = new ProductsPage();
+    Product_details1Page productsPage = new Product_details1Page();
     ViewCartPage viewCartPage = new ViewCartPage();
     PaymentPage paymentPage = new PaymentPage();
 
