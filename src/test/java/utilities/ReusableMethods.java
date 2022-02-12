@@ -177,6 +177,13 @@ public class ReusableMethods {
 
 
     }
+
+    /** Select from DROPDOWN MENU by VALUE */
+    public static void selectItemFromDropDownMenu(WebElement webElement, String item){
+        Select select = new Select(webElement);
+        select.selectByValue(item);
+
+    }
 }
 
     
