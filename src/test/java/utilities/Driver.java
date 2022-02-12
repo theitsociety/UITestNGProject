@@ -47,7 +47,6 @@ public class Driver {
     }
 
     public static void closeDriver(){
-
         if(driver!=null){//if driver is pointing somewhere is beigng used
 
             driver.quit();//close the driver
@@ -55,6 +54,7 @@ public class Driver {
             driver=null;// and make the driver null so that we can instantiate the driver again
 
         }
+//        driver.close();
 
     }
 

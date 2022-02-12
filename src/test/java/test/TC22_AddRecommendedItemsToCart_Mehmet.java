@@ -24,7 +24,7 @@ public class TC22_AddRecommendedItemsToCart_Mehmet {
     */
 
     @Test
-    public void VerifyAllProducts() {
+    public void TC22() {
 //        1-2
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
         Driver.getDriver().manage().window().maximize();
